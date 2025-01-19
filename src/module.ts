@@ -1,19 +1,28 @@
-import { defineNuxtModule, addPlugin, createResolver } from '@nuxt/kit'
+import { defineNuxtModule, addPlugin, createResolver, addImports } from '@nuxt/kit'
 
-// Module options TypeScript interface definition
-export interface ModuleOptions {}
+export interface ModuleOptions {
+  composableName?: string
+}
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
-    name: 'my-module',
-    configKey: 'myModule',
+    name: 'nuxt-toast',
+    configKey: 'iziToast',
+    compatibility: { nuxt: '>=3.0.0' },
   },
-  // Default configuration options of the Nuxt module
-  defaults: {},
-  setup(_options, _nuxt) {
+
+  setup(options, _nuxt) {
     const resolver = createResolver(import.meta.url)
 
-    // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
-    addPlugin(resolver.resolve('./runtime/plugin'))
+    addPlugin({
+      src: resolver.resolve('./runtime/plugin'),
+      mode: 'client',
+    })
+
+    addImports({
+      name: 'useToast',
+      as: options.composableName ?? 'useToast',
+      from: resolver.resolve('./runtime/composables/useToast'),
+    })
   },
 })
