@@ -14,32 +14,37 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - run: corepack enable
-      - uses: actions/setup-node@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
         with:
-          node-version: 20
+          bun-version: latest
 
       - name: Install dependencies
-        run: npx nypm@latest i
+        run: bun install
 
       - name: Lint
-        run: npm run lint
+        run: bun run lint
 
   test:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
-      - run: corepack enable
-      - uses: actions/setup-node@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
         with:
-          node-version: 20
+          bun-version: latest
 
       - name: Install dependencies
-        run: npx nypm@latest i
+        run: bun install
+
+      - name: Install Playwright Browsers
+        run: bunx playwright install --with-deps chromium
 
       - name: Playground prepare
-        run: npm run dev:prepare
+        run: bun run dev:prepare
 
       - name: Test
-        run: npm run test
+        run: bun run test
