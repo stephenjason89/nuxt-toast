@@ -1,7 +1,6 @@
 import type { IziToastSettings } from 'izitoast'
 import iziToast from 'izitoast'
 import type Toast from './types/IziToast.ts'
-import { defineNuxtPlugin } from '#app'
 import 'izitoast/dist/css/iziToast.min.css'
 
 export default defineNuxtPlugin(() => {

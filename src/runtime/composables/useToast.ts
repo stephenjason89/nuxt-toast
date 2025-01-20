@@ -1,5 +1,4 @@
 import type Toast from '../types/IziToast'
-import { useNuxtApp } from '#app'
 
 export function useToast(): Toast {
   if (import.meta.server) {
