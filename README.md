@@ -1,4 +1,4 @@
-# Nuxt IziToast
+# Nuxt Toast
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
@@ -22,9 +22,36 @@ A Nuxt module for easily integrating [iziToast](https://github.com/marcelodolza/
 Install the module to your Nuxt application with one command:
 
 ```bash
-npx nuxi module add nuxt-izi-toast
+npx nuxi module add nuxt-toast
 ```
 
+### **Manual Installation**
+
+If you prefer to install manually, run:
+
+```bash
+# Using npm
+npm install nuxt-toast
+
+# Using yarn
+yarn add nuxt-toast
+
+# Using pnpm
+pnpm add nuxt-toast
+
+# Using bun
+bun add nuxt-toast
+```
+
+Then, add it to your Nuxt config:
+
+```ts
+export default defineNuxtConfig({
+  modules: [
+    'nuxt-toast'
+  ]
+})
+```
 ## 🚀 Usage
 
 Once installed, you can use `useToast()` anywhere in your Nuxt app:
@@ -95,9 +122,10 @@ useNotification().success({
 
 [npm-version-src]: https://img.shields.io/npm/v/nuxt-toast/latest.svg?style=flat&colorA=020420&colorB=00DC82
 [npm-version-href]: https://npmjs.com/package/nuxt-toast
-[npm-downloads-src]: https://img.shields.io/npm/dm/nuxt-izi-toast.svg?style=flat&colorA=020420&colorB=00DC82
+[npm-downloads-src]: https://img.shields.io/npm/dm/nuxt-toast.svg?style=flat&colorA=020420&colorB=00DC82
 [npm-downloads-href]: https://npm.chart.dev/nuxt-toast
 [license-src]: https://img.shields.io/npm/l/nuxt-toast.svg?style=flat&colorA=020420&colorB=00DC82
 [license-href]: https://npmjs.com/package/nuxt-toast
 [nuxt-src]: https://img.shields.io/badge/Nuxt-020420?logo=nuxt.js
 [nuxt-href]: https://nuxt.com
+
