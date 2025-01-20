@@ -105,18 +105,28 @@ setTimeout(() => {
 </script>
 ```
 
-### **Using a Custom Composable Name**
+### **Customizing the Composable Name**
 
-If you changed `composableName: 'useNotification'` in `nuxt.config.ts`, use:
+If you've modified the `composableName` in `nuxt.config.ts`, for example:
+
+```ts
+export default defineNuxtConfig({
+  toast: { composableName: 'useNotification' }
+})
+```
+
+Then, use the updated composable name in your component:
 
 ```vue
 <script setup>
 useNotification().success({
-	title: 'Success!',
-	message: 'You did it!',
+  title: 'Success!',
+  message: 'You did it!',
 })
 </script>
 ```
+
+This ensures consistency with your custom naming convention. 🚀
 
 <!-- Badges -->
 
