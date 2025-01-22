@@ -1,3 +1,14 @@
+<div align="center">
+  <img src="assets/cover.png" alt="Project Logo" style="width:100%;">
+</div>
+<p align="center" style="margin-top: 25px">
+ Elegant, responsive and lightweight notification plugin with no dependencies.
+</p>
+
+<p align="center">
+  <a href="https://marcelodolza.github.io/iziToast/"><b>Documentation</b></a>
+</p>
+
 # Nuxt Toast
 
 [![npm version][npm-version-src]][npm-version-href]
@@ -6,8 +17,6 @@
 [![Nuxt][nuxt-src]][nuxt-href]
 
 A Nuxt module for easily integrating [iziToast](https://github.com/marcelodolza/iziToast) notifications into your Nuxt 3 application.
-
-- [📖 &nbsp;Demo & Documentation](https://marcelodolza.github.io/iziToast/)
 
 ## Features
 
