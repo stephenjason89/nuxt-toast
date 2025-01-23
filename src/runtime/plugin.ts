@@ -1,11 +1,10 @@
 import type { IziToastSettings } from 'izitoast'
+import iziToast from 'izitoast'
 import type Toast from './types/IziToast.ts'
 import 'izitoast/dist/css/iziToast.min.css'
 import { defineNuxtPlugin } from '#app'
 
 export default defineNuxtPlugin(async () => {
-  const iziToastModule = await import('izitoast')
-  const iziToast = iziToastModule.default || iziToastModule
   const THEMES = {
     info: { color: 'blue', icon: 'ico-info' },
     success: { color: 'green', icon: 'ico-success' },
