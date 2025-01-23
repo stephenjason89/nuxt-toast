@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.1.3
+
+[compare changes](https://github.com/stephenjason89/nuxt-izi-toast/compare/v1.1.2...v1.1.3)
+
+### 🩹 Fixes
+
+- Move iziToast to peerDependencies for better module resolution ([1d65a17](https://github.com/stephenjason89/nuxt-izi-toast/commit/1d65a17))
+
+### ❤️ Contributors
+
+- Stephen Jason Wang <stephenjasonwang@gmail.com>
+
 ## v1.1.2
 
 [compare changes](https://github.com/stephenjason89/nuxt-izi-toast/compare/v1.1.1...v1.1.2)
