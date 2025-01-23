@@ -11,8 +11,13 @@ export default defineNuxtModule<ModuleOptions>({
     compatibility: { nuxt: '>=3.0.0' },
   },
 
-  setup(options, _nuxt) {
+  setup(options, nuxt) {
     const resolver = createResolver(import.meta.url)
+
+    nuxt.hook('vite:extend', ({ config }) => {
+      (config.optimizeDeps ??= {}).include ??= []
+      config.optimizeDeps.include.push('izitoast')
+    })
 
     addPlugin({
       src: resolver.resolve('./runtime/plugin'),
