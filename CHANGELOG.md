@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.1.4
+
+[compare changes](https://github.com/stephenjason89/nuxt-toast/compare/v1.1.3...v1.1.4)
+
+### 🩹 Fixes
+
+- Add iziToast to vite optimizeDeps for proper module resolution ([149384c](https://github.com/stephenjason89/nuxt-toast/commit/149384c))
+
+### ❤️ Contributors
+
+- Stephen Jason Wang <stephenjasonwang@gmail.com>
+
 ## v1.1.3
 
 [compare changes](https://github.com/stephenjason89/nuxt-izi-toast/compare/v1.1.2...v1.1.3)
