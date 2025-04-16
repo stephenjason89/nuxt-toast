@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/cover.png" alt="Project Logo" style="width:100%;">
+  <img src="https://raw.githubusercontent.com/stephenjason89/nuxt-toast/main/assets/cover.png" alt="Project Logo" style="width:100%;">
 </div>
 <p align="center" style="margin-top: 25px">
  Elegant, responsive and lightweight notification plugin with no dependencies.
