@@ -40,8 +40,8 @@ jobs:
       - name: Install dependencies
         run: bun install
 
-      - name: Install Playwright Browsers
-        run: bunx playwright install --with-deps chromium
+      - name: Install Playwright Browsers (exact version)
+        run: node_modules/.bin/playwright install chromium --with-deps
 
       - name: Playground prepare
         run: bun run dev:prepare
