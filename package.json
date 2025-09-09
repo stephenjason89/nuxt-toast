@@ -1,6 +1,6 @@
 {
   "name": "nuxt-toast",
-  "version": "1.1.4",
+  "version": "1.2.0",
   "description": "A Nuxt module for iziToast notifications",
   "repository": "https://github.com/stephenjason89/nuxt-toast",
   "author": "Stephen Jason Wang",
@@ -32,10 +32,10 @@
     "test:types": "vue-tsc --noEmit && cd playground && vue-tsc --noEmit"
   },
   "dependencies": {
-    "@nuxt/kit": "4.1.1"
+    "@nuxt/kit": "^4.1.1"
   },
   "peerDependencies": {
-    "izitoast": "1.4.0"
+    "izitoast": "^1.4.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",

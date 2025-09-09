@@ -4,7 +4,7 @@
     "": {
       "name": "my-module",
       "dependencies": {
-        "@nuxt/kit": "4.1.1",
+        "@nuxt/kit": "^4.1.1",
       },
       "devDependencies": {
         "@commitlint/cli": "^19.8.1",
@@ -25,7 +25,7 @@
         "vue-tsc": "^3.0.6",
       },
       "peerDependencies": {
-        "izitoast": "1.4.0",
+        "izitoast": "^1.4.0",
       },
     },
   },
