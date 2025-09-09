@@ -16,11 +16,11 @@
 [![License][license-src]][license-href]
 [![Nuxt][nuxt-src]][nuxt-href]
 
-A Nuxt module for easily integrating [iziToast](https://github.com/marcelodolza/iziToast) notifications into your Nuxt 3 application.
+A Nuxt module for easily integrating [iziToast](https://github.com/marcelodolza/iziToast) notifications into your Nuxt 4 application.
 
 ## Features
 
-- 🔔 &nbsp;Easily show toast notifications in your Nuxt 3 app
+- 🔔 &nbsp;Easily show toast notifications in your 4 app
 - 🎨 &nbsp;Customizable styles and icons
 - ⚡ &nbsp;Supports auto-imported composable (`useToast()` by default)
 - 🔧 &nbsp;Fully configurable via `nuxt.config.ts`
