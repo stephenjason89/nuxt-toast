@@ -38,22 +38,22 @@
     "izitoast": "1.4.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "19.8.1",
-    "@commitlint/config-conventional": "19.8.1",
-    "@nuxt/devtools": "2.6.3",
-    "@nuxt/eslint-config": "1.9.0",
-    "@nuxt/module-builder": "1.0.2",
-    "@nuxt/schema": "4.1.1",
-    "@nuxt/test-utils": "3.19.2",
-    "@types/node": "24.3.1",
-    "changelogen": "0.6.2",
-    "eslint": "9.35.0",
-    "husky": "9.1.7",
-    "nuxt": "4.1.1",
-    "playwright": "1.55.0",
-    "typescript": "5.9.2",
-    "vitest": "3.2.4",
-    "vue-tsc": "3.0.6"
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@nuxt/devtools": "^2.6.3",
+    "@nuxt/eslint-config": "^1.9.0",
+    "@nuxt/module-builder": "^1.0.2",
+    "@nuxt/schema": "^4.1.1",
+    "@nuxt/test-utils": "^3.19.2",
+    "@types/node": "^24.3.1",
+    "changelogen": "^0.6.2",
+    "eslint": "^9.35.0",
+    "husky": "^9.1.7",
+    "nuxt": "^4.1.1",
+    "playwright": "^1.55.0",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4",
+    "vue-tsc": "^3.0.6"
   },
   "packageManager": "pnpm@10.15.1+sha512.34e538c329b5553014ca8e8f4535997f96180a1d0f614339357449935350d924e22f8614682191264ec33d1462ac21561aff97f6bb18065351c162c7e8f6de67"
 }
