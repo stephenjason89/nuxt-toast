@@ -8,20 +8,25 @@
   "type": "module",
   "exports": {
     ".": {
-      "types": "./dist/types.d.ts",
-      "import": "./dist/module.mjs",
-      "require": "./dist/module.cjs"
+      "types": "./dist/types.d.mts",
+      "import": "./dist/module.mjs"
     }
   },
-  "main": "./dist/module.cjs",
-  "types": "./dist/types.d.ts",
+  "main": "./dist/module.mjs",
+  "typesVersions": {
+    "*": {
+      ".": [
+        "./dist/types.d.mts"
+      ]
+    }
+  },
   "files": [
     "dist"
   ],
   "scripts": {
     "commitlint": "commitlint --edit",
     "prepack": "nuxt-module-build build",
-    "dev": "nuxi dev playground",
+    "dev": "npm run dev:prepare && nuxi dev playground",
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
     "release": "npm run lint && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
@@ -32,27 +37,28 @@
     "test:types": "vue-tsc --noEmit && cd playground && vue-tsc --noEmit"
   },
   "dependencies": {
-    "@nuxt/kit": "^3.16.2"
+    "@nuxt/kit": "^4.1.2"
   },
   "peerDependencies": {
     "izitoast": "^1.4.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.8.0",
-    "@commitlint/config-conventional": "^19.8.0",
-    "@nuxt/devtools": "^1.7.0",
-    "@nuxt/eslint-config": "^0.7.6",
-    "@nuxt/module-builder": "^0.8.4",
-    "@nuxt/schema": "^3.16.2",
-    "@nuxt/test-utils": "^3.17.2",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@nuxt/devtools": "^2.6.5",
+    "@nuxt/eslint-config": "^1.9.0",
+    "@nuxt/module-builder": "^1.0.2",
+    "@nuxt/schema": "^4.1.2",
+    "@nuxt/test-utils": "^3.19.2",
     "@types/node": "latest",
-    "changelogen": "^0.5.7",
-    "eslint": "^9.24.0",
+    "changelogen": "^0.6.2",
+    "eslint": "^9.36.0",
     "husky": "^9.1.7",
-    "nuxt": "^3.16.2",
-    "playwright": "^1.51.1",
-    "typescript": "~5.7.3",
-    "vitest": "^2.1.9",
-    "vue-tsc": "^2.2.8"
-  }
+    "nuxt": "^4.1.2",
+    "playwright": "^1.55.0",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4",
+    "vue-tsc": "^3.1.0"
+  },
+  "packageManager": "bun@1.2.0"
 }
