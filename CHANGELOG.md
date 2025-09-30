@@ -1,6 +1,26 @@
 # Changelog
 
 
+## v1.2.0
+
+[compare changes](https://github.com/stephenjason89/nuxt-toast/compare/v1.1.4...v1.2.0)
+
+### 📖 Documentation
+
+- Update README image path to absolute URL for external accessibility ([ae0baea](https://github.com/stephenjason89/nuxt-toast/commit/ae0baea))
+
+### 🏡 Chore
+
+- **release:** V1.1.4 ([42da8c0](https://github.com/stephenjason89/nuxt-toast/commit/42da8c0))
+- Update playwright-core to 1.50.0 ([847c227](https://github.com/stephenjason89/nuxt-toast/commit/847c227))
+- Replace playwright-core with playwright & update other npm dependencies ([8ffeff6](https://github.com/stephenjason89/nuxt-toast/commit/8ffeff6))
+- Nuxt 4 upgrade ([#1](https://github.com/stephenjason89/nuxt-toast/pull/1))
+
+### ❤️ Contributors
+
+- Griffin Wiebel ([@parion](https://github.com/parion))
+- Stephen Jason Wang <stephenjasonwang@gmail.com>
+
 ## v1.1.4
 
 [compare changes](https://github.com/stephenjason89/nuxt-toast/compare/v1.1.3...v1.1.4)

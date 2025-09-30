@@ -1,6 +1,6 @@
 {
   "name": "nuxt-toast",
-  "version": "1.1.4",
+  "version": "1.2.0",
   "description": "A Nuxt module for iziToast notifications",
   "repository": "https://github.com/stephenjason89/nuxt-toast",
   "author": "Stephen Jason Wang",
