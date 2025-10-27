@@ -4,7 +4,9 @@ import type Toast from './types/IziToast.ts'
 import 'izitoast/dist/css/iziToast.min.css'
 import { defineNuxtPlugin } from '#app'
 
-const iziToast = iziToastModule.default ?? iziToastModule
+const globalToast
+  = typeof window !== 'undefined' && 'iziToast' in window ? window.iziToast : undefined
+const iziToast = iziToastModule.default ?? globalToast ?? iziToastModule
 
 export default defineNuxtPlugin(() => {
   const THEMES = {
