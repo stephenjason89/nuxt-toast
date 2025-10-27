@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.4.0
+
+[compare changes](https://github.com/stephenjason89/nuxt-toast/compare/v1.3.2...v1.4.0)
+
+### 🚀 Enhancements
+
+- Add global iziToast settings configuration support ([59aebb9](https://github.com/stephenjason89/nuxt-toast/commit/59aebb9))
+
+### ❤️ Contributors
+
+- Stephen Jason Wang <stephenjasonwang@gmail.com>
+
 ## v1.3.2
 
 [compare changes](https://github.com/stephenjason89/nuxt-toast/compare/v1.3.1...v1.3.2)
