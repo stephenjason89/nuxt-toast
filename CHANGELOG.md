@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.3.2
+
+[compare changes](https://github.com/stephenjason89/nuxt-toast/compare/v1.3.1...v1.3.2)
+
+### 🩹 Fixes
+
+- Add global window.iziToast fallback for Bun 1.3 compatibility ([e930005](https://github.com/stephenjason89/nuxt-toast/commit/e930005))
+
+### ❤️ Contributors
+
+- Stephen Jason Wang <stephenjasonwang@gmail.com>
+
 ## v1.3.1
 
 [compare changes](https://github.com/stephenjason89/nuxt-toast/compare/v1.3.0...v1.3.1)
