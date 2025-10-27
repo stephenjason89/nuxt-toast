@@ -1,7 +1,14 @@
 import { defineNuxtModule, addPlugin, createResolver, addImports } from '@nuxt/kit'
 
+import type { IziToastSettings } from 'izitoast'
+
 export interface ModuleOptions {
   composableName?: string
+  /**
+   * Global iziToast settings that will be applied to all toasts.
+   * See https://github.com/marcelodolza/iziToast for all available options
+   */
+  settings?: Partial<IziToastSettings>
 }
 
 export default defineNuxtModule<ModuleOptions>({
@@ -18,6 +25,8 @@ export default defineNuxtModule<ModuleOptions>({
       (config.optimizeDeps ??= {}).include ??= []
       config.optimizeDeps.include.push('izitoast')
     })
+
+    nuxt.options.runtimeConfig.public.nuxtToastSettings = options.settings || {}
 
     addPlugin({
       src: resolver.resolve('./runtime/plugin'),

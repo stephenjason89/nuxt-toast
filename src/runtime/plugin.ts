@@ -2,13 +2,15 @@ import type { IziToastSettings } from 'izitoast'
 import * as iziToastModule from 'izitoast'
 import type Toast from './types/IziToast.ts'
 import 'izitoast/dist/css/iziToast.min.css'
-import { defineNuxtPlugin } from '#app'
+import { defineNuxtPlugin, useRuntimeConfig } from '#app'
 
 const globalToast
   = typeof window !== 'undefined' && 'iziToast' in window ? window.iziToast : undefined
 const iziToast = iziToastModule.default ?? globalToast ?? iziToastModule
 
 export default defineNuxtPlugin(() => {
+  const settings = (useRuntimeConfig().public?.nuxtToastSettings as Partial<IziToastSettings>) || {}
+
   const THEMES = {
     info: { color: 'blue', icon: 'ico-info' },
     success: { color: 'green', icon: 'ico-success' },
@@ -16,6 +18,8 @@ export default defineNuxtPlugin(() => {
     error: { color: 'red', icon: 'ico-error' },
     question: { color: 'yellow', icon: 'ico-question' },
   }
+
+  if (Object.keys(settings).length > 0) iziToast.settings(settings)
 
   return {
     provide: {
@@ -35,10 +39,11 @@ export default defineNuxtPlugin(() => {
         },
         data(data: IziToastSettings & { status: keyof typeof THEMES }) {
           iziToast.show({
+            ...settings,
             ...data,
             color: THEMES[data.status]?.color,
             icon: THEMES[data.status]?.icon,
-            timeout: data.timeout ?? 2500,
+            timeout: data.timeout ?? settings.timeout ?? 2500,
           })
         },
       } as Toast,

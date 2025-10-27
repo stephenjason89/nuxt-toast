@@ -114,9 +114,29 @@ setTimeout(() => {
 </script>
 ```
 
-### **Customizing the Composable Name**
+### **Configuration Options**
 
-If you've modified the `composableName` in `nuxt.config.ts`, for example:
+You can configure the module in your `nuxt.config.ts`:
+
+```ts
+export default defineNuxtConfig({
+  modules: ['nuxt-toast'],
+  toast: {
+    composableName: 'useNotification', // Customize the composable name
+    settings: {
+      // Global iziToast settings applied to all toasts
+      rtl: true,
+      position: 'topCenter',
+      timeout: 3000,
+      // ... see https://github.com/marcelodolza/iziToast for all options
+    }
+  }
+})
+```
+
+#### **Customizing the Composable Name**
+
+If you've modified the `composableName` in `nuxt.config.ts`:
 
 ```ts
 export default defineNuxtConfig({
@@ -124,7 +144,7 @@ export default defineNuxtConfig({
 })
 ```
 
-Then, use the updated composable name in your component:
+Then use the updated composable name in your component:
 
 ```vue
 <script setup>
@@ -133,6 +153,26 @@ useNotification().success({
   message: 'You did it!',
 })
 </script>
+```
+
+#### **Global iziToast Settings**
+
+You can pass any [iziToast configuration options](https://github.com/marcelodolza/iziToast#settings) through the `settings` property:
+
+```ts
+export default defineNuxtConfig({
+  toast: {
+    settings: {
+      rtl: true,              // Right-to-left support
+      position: 'topRight',    // Default position
+      timeout: 5000,          // Default timeout
+      closeOnEscape: true,    // Close on ESC key
+      closeOnClick: true,     // Close on click
+      pauseOnHover: true,     // Pause on hover
+      // ... and many more options
+    }
+  }
+})
 ```
 
 This ensures consistency with your custom naming convention. 🚀
